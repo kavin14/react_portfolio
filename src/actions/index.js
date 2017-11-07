@@ -18,7 +18,7 @@ export function fetchWeather(city){
 
 const GLIPHY_API_KEY = `bz0zbUe3i1J57itQUefH8j5EHV45Si02`;
 const GLIPHY_ROOT_URL = `http://api.giphy.com/v1/gifs/search?q=`;
-export function postSearchTerm(data){
+export function postSearchTerm(data = "good job"){
     const request = axios.get(`${GLIPHY_ROOT_URL}${data}&api_key=${GLIPHY_API_KEY}`)
     return {
         type : "SEARCH-TERM",
@@ -37,5 +37,28 @@ export function resetGlifyList(){
     return {
         type : "GLIFY_RESET",
         payload: []
+    }
+}
+
+export function homePageFormState(value = []){
+    return {
+        type : "TOGGLE_FORM_STATE",
+        payload : value
+    }
+}
+
+export function addToDo(value = ""){
+    console.log("from action" + value)
+    return {
+        type : "ADD_TO_DO",
+        payload : value
+    }
+}
+
+export function move(index = 0, symbol){
+    
+    return {
+        type : "MOVE_TO_DO",
+        payload : [index,symbol]
     }
 }

@@ -14,6 +14,13 @@ constructor(props){
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onFormReset = this.onFormReset.bind(this);
 }
+  componentWillMount(){
+       if (this.props.forapp == "weatherapp"){
+        this.props.fetchWeather('san jose')
+    }else{
+        this.props.postSearchTerm()
+    }
+    }
  onInputChange(event){
      this.setState({term : event.target.value})
  }
@@ -44,7 +51,7 @@ constructor(props){
             <form className = "input-group" onSubmit={this.onFormSubmit} onReset={this.onFormReset}>
                 <input type="text" 
                 className="form-control"
-                placeholder="Get forcast for city"
+                placeholder={(this.props.forapp == "weatherapp")?"Get forcast for city": "Search Gliphy"}
                 value ={this.state.term}
                 onChange={this.onInputChange}/>
                 <span className="input-group-btn">

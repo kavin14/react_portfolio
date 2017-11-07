@@ -14,9 +14,9 @@ class Cards extends Component{
         }
         return (
             
-            <div >
+            <div>
                 {items.data.map((item) => 
-                 <div className="card z-depth-4" style = {divStyle} key = {item.id}>
+                 <div className="card z-depth-4 col"  key = {item.id}>
                     <div className="card-image waves-effect waves-block waves-light">
                     <img className="activator" src={item.images.fixed_height.url}/>
                     </div>
@@ -39,7 +39,7 @@ class Cards extends Component{
        // this.props.glify = (this.props.glify == null)? {} :  this.props.glify;
         console.log(this.props.glify);
         return (
-            <div>
+            <div className="row">
                 {this.props.glify.map(this.renderHelper)}
             </div>
         );
