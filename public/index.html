@@ -19,7 +19,11 @@
   <script>
       $(document).ready(function(){
            $(".button-collapse").sideNav();
+            $(".side-nav").click(function(){
+              $(".button-collapse").sideNav("hide");
+            });
       });
+
 </script>
     <div  id="container"></div>
   </body>
