@@ -23,6 +23,8 @@ class ToDo extends Component {
            marginRight: "15px"
        }
        return( <div>
+           <h3>TO DO list</h3>
+            <p>Start adding the tasks. The tasks can be moved up or down based on priority. </p>
             <input type="text" value={this.state.term} onChange={this.onTextChange } placeholder="start adding your tasks"/>
             <button onClick = {() => this.props.addToDo(this.state.term)} className="btn">Add</button>
             <ol>
