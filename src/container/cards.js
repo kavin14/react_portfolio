@@ -12,22 +12,27 @@ class Cards extends Component{
             display : 'inline-block',
             margin: '10px'
         }
+        var cardStyle ={
+            height : '300px',
+            width : '300px',
+            margin: '2px'
+        }
         return (
             
             <div>
                 {items.data.map((item) => 
-                 <div className="card z-depth-4 col"  key = {item.id}>
-                    <div className="card-image waves-effect waves-block waves-light">
+                 <div className="card z-depth-4 col"  key = {item.id} style={cardStyle}>
+                    <div className="card-image " >
                     <img className="activator" src={item.images.fixed_height.url}/>
                     </div>
-                    <div className="card-content">
+                    {/*<div className="card-content">
                     <span className="card-title activator grey-text text-darken-4">{item.slug}<i className="material-icons right">more_vert</i></span>
-                    <p><a href={item.source_post_url}>{item.source_post_url}</a></p>
+                    <p><a href={item.source_post_url}></a></p>
                     </div>
                     <div className="card-reveal">
                     <span className="card-title grey-text text-darken-4">{item.slug}<i className="material-icons right">close</i></span>
                     <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div>
+                    </div>*/}
                 </div>
                 
                 )}
@@ -40,6 +45,7 @@ class Cards extends Component{
         console.log(this.props.glify);
         return (
             <div className="row">
+                <br/>
                 {this.props.glify.map(this.renderHelper)}
             </div>
         );

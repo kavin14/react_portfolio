@@ -21,7 +21,7 @@ export default class HeaderSection extends Component {
         return (
             <div>
             <nav>
-    <div className="nav-wrapper red">
+    <div className="nav-wrapper blue darken-4">
       <Link to="/" style={headerLogoStyle}>Kavin Premkumar</Link>
       <a href="#" data-activates="mobile-demo" className="button-collapse" ><i className="material-icons">menu</i></a>
       <ul className="right hide-on-med-and-down">

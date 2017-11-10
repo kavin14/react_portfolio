@@ -16,7 +16,7 @@ constructor(props){
 }
   componentWillMount(){
        if (this.props.forapp == "weatherapp"){
-        this.props.fetchWeather()
+        //this.props.fetchWeather()
     }else{
         this.props.postSearchTerm()
     }

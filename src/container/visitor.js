@@ -24,7 +24,7 @@ class Visitor extends Component {
         <div className="row center">  
             <div className="col " style = {cardStyle}>  
             <div className="App-logo">
-                <img src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="" style={imgStyle}/> 
+                <img src={logo} alt="" style={imgStyle}/> 
             </div>    
                 {(this.props.isInputForm == false) ? <GetInterestForm/> : <GetInputForm />}
              </div>
