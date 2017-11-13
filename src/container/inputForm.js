@@ -25,6 +25,12 @@ class GetInputForm extends Component{
             width: '30px',
             objectFit: 'contain'
         }
+        var buttonStyle = {
+            margin: '10px'
+        }
+        var divStyle={
+            display : "inline"
+        }
         return (
             <div>
                   <h5> {this.state.welcome} </h5>
@@ -36,13 +42,13 @@ About me: I'm a bay area based software engineer with 5 years of experience in s
                 <br/> 
        
             </h6>
-            <div >
-
-                 <a href="https://www.linkedin.com/in/kavinisaac/" target="_blank">
-                  
-                 <div><button className="btn btn-primary">Contact me</button></div>
+            <div>
+                 <a className="btn btn-primary" style={buttonStyle} href="https://www.linkedin.com/in/kavinisaac/" target="_blank">
+                 Contact me
                  </a>   
-                 
+                  <a className="btn btn-primary" style={buttonStyle} href="https://s3-us-west-2.amazonaws.com/com.kavin.portfolio.react/KavinPremkumar_Resume.pdf">
+                 <i class="material-icons left">file_download</i>Resume
+                 </a>
             </div>
            
                   {/*<input type="text" value = {this.state.term} onChange={this.onInputChange} placeholder="Your name"/>

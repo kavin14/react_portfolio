@@ -82,7 +82,8 @@ export  class AboutMe extends Component{
         }
      let divStyle = {
             height: '100px',
-            width: '100px'
+            width: '100px',
+            margin: "5px"
         }   
     return (
       <div>
@@ -90,7 +91,7 @@ export  class AboutMe extends Component{
         <div className="row">
         <div >
           {this.state.frontEndSkills.map((el)=>
-            {return <div className="col s1" style={divStyle}>
+            {return <div className="card col s1" style={divStyle}>
                 <img src={el.URL} alt={el.alt} style={imgStyle}/>
             </div>
             }
@@ -102,7 +103,7 @@ export  class AboutMe extends Component{
         <div className="row">
         <div >
           {this.state.practices.map((el)=>
-            {return <div className="col s2">
+            {return <div className="card col s2" style={divStyle}>
                 <img src={el.URL} alt={el.alt} style={imgStyle}/>
             </div>
             }
@@ -125,11 +126,14 @@ export default class App extends Component {
           <HeaderSection />
           <div className="container"> 
           <Switch>
+            
             <Route path='/weatherApp' component={weatherApp}> </Route>
             <Route path='/aboutme' component={AboutMe}> </Route>
             <Route path='/glify' component={GliphyApp}> </Route>
             <Route path='/todo' component={ToDo}> </Route>
-            <Route path='/' component={Visitor}> </Route>
+            <Route path='/' component={Visitor}> 
+            <Route path="*" component={Visitor}></Route>
+            </Route>
           </Switch>
           </div> 
          </div> 
